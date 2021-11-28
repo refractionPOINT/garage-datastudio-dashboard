@@ -1,0 +1,35 @@
+body
+    {
+    width: 100%;
+    height: 100%;
+    background-image:url(https://images.pexels.com/photos/3846554/pexels-photo-3846554.jpeg);
+    background-size: cover;
+    background-attachment:fixed;
+    margin: 0;
+    padding: 0;
+    }
+
+/* ========== Your font style here ========== */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+/* ===== Your dashboardBox style here ===== */
+.dashboardBox{
+  font-family: 'Open Sans';
+  font-weight: 400;
+  font-size: 14px;
+  color: #0AB02E;
+  width: 1200px;
+  height: auto;
+  margin: 10% auto;
+  padding: 10px;
+  background-color: #000000;
+  border: 1px solid #f5f5f5;
+  border-radius: 15px;
+  -webkit-box-shadow:  0px 0px 10px 0px #f5f5f5;
+  box-shadow:  0px 0px 10px 0px #f5f5f5;
+}
