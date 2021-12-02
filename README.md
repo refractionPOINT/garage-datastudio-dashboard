@@ -1,4 +1,5 @@
 
+
 # garage-datastudio-dashboard
 Example of using Google Data Studio to build LimaCharlie dashboards.
 
@@ -39,8 +40,14 @@ If events are not flowing, you cannot go forward with further steps.
 
 ### Google Cloud Platform &rightarrow; Log Router
 Navigate to the [log router](https://console.cloud.google.com/logs/router) and `CREATE SINK`.
-The sink creation procedure is very intuitive, and it is assisted by a very nice wizard, but you need to be sure to choose the following configuration:
-|Step|Field|Dropdown option|
+The sink creation procedure is very intuitive, and it is assisted by a very nice wizard, but you need to be sure to choose the following configuration between the several steps:
+|Step|Field|Option|
 |--|--|--|
 |Sink Destination|Select Sink Service|BigQuery dataset |
 |Sink Destination|Select BigQuery dataset|Create a new BigQuery dataset|
+|Choose logs to include in sink|Create an inclusion filter|`Your SQL query`
+
+Now that the new sink is created, as soon as a new event will be logged and it will match the inclusion filter you created, **the new BigQuery dataset will be automatically populated**.
+
+
+Congtatulations: LimaCharlie is now connected to BigQuery!
