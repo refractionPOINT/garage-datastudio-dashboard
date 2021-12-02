@@ -1,3 +1,4 @@
+
 # garage-datastudio-dashboard
 Example of using Google Data Studio to build LimaCharlie dashboards.
 
@@ -13,7 +14,21 @@ With a bit more of coding (slightly advanced), it will be also possible to creat
 ## How to
 We can leverage the power of [LimaCharlie webhook outputs](https://doc.limacharlie.io/docs/documentation/ZG9jOjE5MzExMTY-outputs#webhook-details), Google Cloud and Google data studio.
 
-### Google Cloud
-#### Google Cloud Function
+### Google Cloud Function
 If you are not familiar with [Google Cloud](https://cloud.google.com/) Functions, I created a basic one [here](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/function-source/index.js).
-Once authenticated in [Google Cloud Platform](https://console.cloud.google.com/), let's create a new *Node.js* Cloud Function as per the [example](https://github.com/refractionPOINT/garage-datastudio-dashboard/tree/master/function-source) we just mentioned. 
+Once authenticated in [Google Cloud Platform](https://console.cloud.google.com/), let's create a new *Node.js* Cloud Function as per the [example](https://github.com/refractionPOINT/garage-datastudio-dashboard/tree/master/function-source) we just mentioned.
+
+Now that you have a Cloud Function set, you can move to the tab `TRIGGER`, this will show you a Trigger URL.
+This is the URL we should pass to app.limacharlie.io as core parameter of a new output.
+### LimaCharlie
+Create a new LimaCharlie Output:
+`Add Output` &rightarrow; Choose `Detection` Output Stream &rightarrow; Choose `Webhook` as Output Destination
+
+In the field `Output Destination` copy the Trigger URL of your Google Cloud Function.
+
+For this experiment I flagged the following parameters:
+  - Wrap JSON Event with Event Type
+  - Delete on Failure
+  - Flatten JSON to a single level
+  
+As soon as you will save the new output, all the detections that will fire in the related LimaCharlie ORG, will trigger the Google Cloud Function.
