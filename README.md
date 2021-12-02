@@ -32,3 +32,15 @@ For this experiment I flagged the following parameters:
   - Flatten JSON to a single level
   
 As soon as you will save the new output, all the detections that will fire in the related LimaCharlie ORG, will trigger the Google Cloud Function.
+
+**IMPORTANT**: It's now time to check that your detection data are landing into Google Cloud Platform Logs, for doing this you can leverage the Log Explorer under the Logging Operations tab, and use the traditional SQL syntax to perform a query.
+A basic one from the Log Explorer can be `"author"` or whatever terms you are expecting to be in your Detections Output (e.g. the `action: report` `name:` you set in your LimaCharlie Detection and Response Rule).
+If events are not flowing, you cannot go forward with further steps.
+
+### Google Cloud Platform &rightarrow; Log Router
+Navigate to the [log router](https://console.cloud.google.com/logs/router) and `CREATE SINK`.
+The sink creation procedure is very intuitive, and it is assisted by a very nice wizard, but you need to be sure to choose the following configuration:
+|Step|Field|Dropdown option|
+|--|--|--|
+|Sink Destination|Select Sink Service|BigQuery dataset |
+|Sink Destination|Select BigQuery dataset|Create a new BigQuery dataset|
