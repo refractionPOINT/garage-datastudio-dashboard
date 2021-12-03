@@ -47,7 +47,16 @@ The sink creation procedure is very intuitive, and it is assisted by a very nice
 |Sink Destination|Select BigQuery dataset|Create a new BigQuery dataset|
 |Choose logs to include in sink|Create an inclusion filter|`Your SQL query`
 
-Now that the new sink is created, as soon as a new event will be logged and it will match the inclusion filter you created, **the new BigQuery dataset will be automatically populated**.
+Now that the new sink is created, as soon as a new event will be logged AND it will match the inclusion filter you created, **the new BigQuery dataset will be automatically populated**.
 
+LimaCharlie is now connected to BigQuery!
 
-Congtatulations: LimaCharlie is now connected to BigQuery!
+### Google Data Studio
+Now that we have our BigQuery dataset and table set as part of our Google Cloud project, we can easily connect it to Google Data Studio as a datasource that will "give life" to the components of our dashboards and reports.
+
+We can create a new report, insert the desired components on our preferred layout and then, keeping the focus on the element we want to connect to our data, add a new data source to it.
+
+When the `Connect to data` window will appear, we just need to select the `BigQuery` option, and follow the swim-lane (Project &rightarrow; Dataset &rightarrow; Table &rightarrow; Configuration) until we reach our desired data source.
+The option `Use timestamp as a data range dimension` is recommended but not mandatory.
+
+Finally select `ADD` , and since then your component in the dashboard is ready to show the data with the option and the style you want to apply!
