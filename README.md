@@ -10,7 +10,7 @@ An example of how the code can be embedded can be found [here](https://github.co
 
 This approach will also allow you to have a granular control of the permissions related to users authorised to access the dashboard, and even schedule periodic reports that will automatically land in users mailbox.
 
-With a bit more of coding (slightly advanced), it will be also possible to create alerts based on Google Big Query.
+With a bit more of coding (slightly [advanced](https://cloud.google.com/bigquery/docs/monitoring-dashboard)), it will be also possible to create alerts based on Google Big Query.
 
 ## How to
 We can leverage the power of [LimaCharlie webhook outputs](https://doc.limacharlie.io/docs/documentation/ZG9jOjE5MzExMTY-outputs#webhook-details), Google Cloud and Google data studio.
@@ -18,6 +18,21 @@ We can leverage the power of [LimaCharlie webhook outputs](https://doc.limacharl
 ### Google Cloud Function
 If you are not familiar with [Google Cloud](https://cloud.google.com/) Functions, I created a basic one [here](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/function-source/index.js).
 Once authenticated in [Google Cloud Platform](https://console.cloud.google.com/), let's create a new *Node.js* Cloud Function as per the [example](https://github.com/refractionPOINT/garage-datastudio-dashboard/tree/master/function-source) we just mentioned.
+
+#### Get started with Google Cloud
+STEP 1 ► Create a new [Google Cloud](https://cloud.google.com/) project
+
+![Create a nre Google Cloud project](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/www/images/garage-dashboard_41.png)
+
+STEP 2 ► Create a new Google Cloud function
+
+![Create a new Google Cloud function](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/www/images/garage-dashboard_39.png)
+
+![Create a new Google Cloud function](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/www/images/garage-dashboard_38.png)
+
+And we can just use the small piece of Node.js code shared in this [repo](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/function-source/index.js) as mentioned before:
+
+![Create a new Google Cloud function](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/www/images/garage-dashboard_37.png)
 
 Now that you have a Cloud Function set, you can move to the tab `TRIGGER`, this will show you a Trigger URL.
 This is the URL we should pass to app.limacharlie.io as core parameter of a new output.
