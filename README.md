@@ -99,16 +99,47 @@ CONGRATULATIONS: LimaCharlie is now connected to BigQuery!
 
 ![Create a sink](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/www/images/garage-dashboard_12.png)
 
+You can now leverage all the power of BigQuery with LimaCharlie:
+
+![LimaCharlie and BigQuery](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/www/images/garage-dashboard_10.gif)
+
 HINT: To test the environement, you can simulate attacks with LimaCharlie leveraging our Atomic Red Team integration (https://www.youtube.com/watch?v=oL6D30IeZ7c):
 
 ![LimaCharlie / Atomic Red Team detections](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/www/images/garage-dashboard_24.png)
 
 ### Google Data Studio
-Now that we have our BigQuery dataset and table set as part of our Google Cloud project, we can easily connect it to Google Data Studio as a datasource that will "give life" to the components of our dashboards and reports.
 
-We can create a new report, insert the desired components on our preferred layout and then, keeping the focus on the element we want to connect to our data, add a new data source to it.
+STEP 6  ► Create a new Data Studio project:
+
+![LimaCharlie and Google Data Studio](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/www/images/garage-dashboard_9.png)
+
+Now that we have our BigQuery dataset and table set as part of our Google Cloud project, we can easily connect it to Google Data Studio as a datasource that will "give life" to the components of our dashboards and reports:
+
+![LimaCharlie and Google Data Studio](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/www/images/garage-dashboard_8.png)
 
 When the `Connect to data` window will appear, we just need to select the `BigQuery` option, and follow the swim-lane (Project &rightarrow; Dataset &rightarrow; Table &rightarrow; Configuration) until we reach our desired data source.
-The option `Use timestamp as a data range dimension` is recommended but not mandatory.
+The option `Use timestamp as a data range dimension` is recommended but not mandatory:
+
+![LimaCharlie and Google Data Studio](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/www/images/garage-dashboard_7.png)
+
+We can create a new report, insert the desired components on our preferred layout and then, keeping the focus on the element we want to connect to our data, add a new data source to it:
+
+![LimaCharlie and Google Data Studio](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/www/images/garage-dashboard_6.png)
+
+![LimaCharlie and Google Data Studio](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/www/images/garage-dashboard_5.png)
+
+![LimaCharlie and Google Data Studio](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/www/images/garage-dashboard_4.png)
+
+Add you favourite search criteria control:
+
+![LimaCharlie and Google Data Studio](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/www/images/garage-dashboard_3.png)
 
 Finally select `ADD` , and since then your component in the dashboard is ready to show the data with the option and the style you want to apply!
+
+![LimaCharlie and Google Data Studio](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/www/images/garage-dashboard_2.png)
+
+Schedule a report delivery via email or just manage access to dashboard link:
+
+![LimaCharlie and Google Data Studio](https://github.com/refractionPOINT/garage-datastudio-dashboard/blob/master/www/images/garage-dashboard_1.png)
+
+STEP 7  ► Have fun!
